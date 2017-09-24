@@ -27,10 +27,13 @@ public class Item {
     private Condition condition;
     @SerializedName("forecast")
     @Expose
-    private List<Forecast> forecast = null;
+    private List<Forecast_> forecast = null;
     @SerializedName("description")
     @Expose
     private String description;
+    @SerializedName("guid")
+    @Expose
+    private Guid guid;
 
     public String getTitle() {
         return title;
@@ -80,11 +83,11 @@ public class Item {
         this.condition = condition;
     }
 
-    public List<Forecast> getForecast() {
+    public List<Forecast_> getForecast() {
         return forecast;
     }
 
-    public void setForecast(List<Forecast> forecast) {
+    public void setForecast(List<Forecast_> forecast) {
         this.forecast = forecast;
     }
 
@@ -94,6 +97,14 @@ public class Item {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Guid getGuid() {
+        return guid;
+    }
+
+    public void setGuid(Guid guid) {
+        this.guid = guid;
     }
 
 }

@@ -1,9 +1,5 @@
 package com.example.tolmachenko.weatherappd;
 
-import com.example.tolmachenko.weatherappd.model.Forecast;
-
-import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -15,8 +11,8 @@ import retrofit2.http.Query;
 interface ApiInterface {
 
     @GET("v1/public/yql")
-    Call<List<Forecast>> getForecasts(@Query("q") String query,
-                                   @Query("format") String format,
-                                   @Query("env") String env,
-                                   @Query("u") String units);
+    Call<com.example.tolmachenko.weatherappd.model.Query> getForecasts(@Query("q") String query,
+                                                                       @Query("format") String format,
+                                                                       @Query("env") String env,
+                                                                       @Query("u") String units);
 }
