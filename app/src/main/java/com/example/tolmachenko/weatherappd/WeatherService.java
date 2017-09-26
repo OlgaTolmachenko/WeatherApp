@@ -35,6 +35,7 @@ public class WeatherService extends IntentService {
                 @Override
                 public void onResponse(Call<Query> call, Response<Query> response) {
                     Log.d("RESPONSE", String.valueOf(response.isSuccessful()));
+                    Log.d("RESPONSE", String.valueOf(response.body().getCount()));
                 }
 
                 @Override
